@@ -1,0 +1,220 @@
+<section id="hero" class="hero section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+
+                    <h1 class="mb-4">
+                        <span class="accent-text">Join Us</span><br>
+                        in Building Innovative Solutions for Tomorrow!
+
+                    </h1>
+
+                    <p class="mb-4 mb-md-5" id="P_tagline">
+                        At SK BIT, we craft transformative solutions through <br>
+                        innovation and collaboration. Join a team where your expertise <br>
+                        drives impact and shapes the future of technology.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button (click)="scrollToJobOpen()">
+                            View Open Positions
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" style="width: 20px; height: 20px; margin-left: 8px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 video-box">
+                <div class="hero-image">
+                    <img src="../assets/img/careerimg.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- /Hero Section -->
+<section class="s2">
+    <h2>Why Work With Us?</h2>
+    <p>Discover what makes SK BIT the perfect place to grow your career.</p>
+    <div class="main">
+        <!-- Card 1 -->
+        <div>
+            <i class="bi bi-hourglass-split" alt="Learning Opportunities"></i>
+            <h3>Flexible Working Hours</h3>
+            <p>Work on your terms and find your best productivity flow.</p>
+        </div>
+        <!-- Card 2 -->
+        <div>
+            <i class="bi bi-code-slash" alt="Learning Opportunities"></i>
+            <h3>Learning & Development</h3>
+            <p>Upskill with training, mentorship, and certifications.</p>
+        </div>
+        <!-- Card 3 -->
+        <div>
+            <i class="bi bi-person-workspace" alt="Learning Opportunities"></i>
+            <h3>Positive Work Culture</h3>
+            <p>Be part of an inclusive and supportive environment.</p>
+        </div>
+        <!-- Card 4 -->
+        <div>
+            <i class="bi bi-graph-up-arrow" alt="Learning Opportunities"></i>
+            <h3>Career Growth</h3>
+            <p>Achieve new heights with clear growth pathways.</p>
+        </div>
+    </div>
+</section>
+
+
+<section #jobopenSection id="jobopen">
+    <h2>Current Job Openings</h2>
+    <p>Join a team where innovation meets growth. Explore exciting opportunities and build your future with us! </p>
+
+    <div class="job-container">
+        <!-- Job Card 1 -->
+        <div class="job-card">
+            <div class="job-title">UI/UX Designer</div>
+            <div class="job-info">📌 Position: UX Design</div>
+            <div class="job-info">📍 Location: Deccan Gymkhana, Pune</div>
+            <a class="apply-btn" (click)="toggleSection()">ApplyNow →</a>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="job-card">
+            <div class="job-title">PHP Developer</div>
+            <div class="job-info">📌 Position: Development</div>
+            <div class="job-info">📍 Location: Deccan Gymkhana, Pune</div>
+            <a class="apply-btn" (click)="toggleSection()">ApplyNow →</a>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="job-card">
+            <div class="job-title">Software Tester</div>
+            <div class="job-info">📌 Position: Quality Assurance</div>
+            <div class="job-info">📍 Location: Deccan Gymkhana, Pune</div>
+            <a class="apply-btn" (click)="toggleSection()">ApplyNow →</a>
+        </div>
+
+        <!-- Job Card 4 -->
+        <div class="job-card">
+            <div class="job-title">React Developer</div>
+            <div class="job-info">📌 Position: Internship</div>
+            <div class="job-info">📍 Location: Deccan Gymkhana, Pune</div>
+            <a class="apply-btn" (click)="toggleSection()">ApplyNow →</a>
+        </div>
+    </div>
+
+</section>
+<!--------------------------------------------------- job Description --------------------------------------------->
+<section *ngIf="isSectionVisible" id="about" class="about section">
+
+    <div class="container">
+
+        <div class="row gy-4 align-items-center justify-content-between">
+
+            <div class="col-xl-5">
+                <h2 class="about-title"> Job Description</h2>
+                <span class="about-meta">Job Title : Angular Developer</span><br>
+                <span class="job-info2">Location : Deccan Gymkhana , Pune </span><br>
+                <span class="job-info2">Job Type : Full time / WFO</span><br>
+                <span class="job-info2">Qualifications : Bachelor’s degree </span><br>
+                <span class="job-info2">Experience Level : 0-3</span><br>
+                <p class="about-description"> We are seeking a talented Angular Developer to
+                    design and develop
+                    user-friendly web applications using the latest
+                    Angular frameworks. You will collaborate with backend developers and designers to create
+                    high-performance, scalable
+                    solutions.</p>
+                <div>
+                    <span class="about-meta">Key Responsibilities :</span>
+                    <ul class="ul-list">
+                        <li>Develop and maintain dynamic web applications using Angular (latest versions), TypeScript,
+                            and
+                            JavaScript.</li>
+                        <li>Build reusable components and front-end libraries for future use.
+                        </li>
+                        <li>Optimize application performance and ensure responsiveness across different devices.</li>
+                        <li>Collaborate with UX/UI designers to implement user-friendly designs.</li>
+                        <li>Integrate RESTful APIs and third-party services.</li>
+                        <li>Debug and troubleshoot issues to improve application performance.</li>
+                        <li>Follow Agile development methodologies and participate in sprint planning and code reviews.
+                        </li>
+                        <li>Stay up to date with the latest industry trends and Angular best practices.</li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="about-meta">Required Skills : </span>
+                    <ul>
+                        <li>Proficiency in Angular , TypeScript, and JavaScript.</li>
+                        <li>Strong knowledge of HTML5, CSS3, SCSS, and Bootstrap.</li>
+                        <li>Experience with RESTful APIs, HTTP Client, and RxJS (Observables & Promises).</li>
+                        <li>Knowledge of responsive design and cross-browser compatibility.</li>
+                        <li>Understanding of version control systems Git, GitHub.</li>
+                        <li>Strong debugging and problem-solving skills.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="image-wrapper">
+                    <div class="images position-relative">
+                        <div class="applyform">
+                            <h2>Job Application Form</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" formControlName="name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" formControlName="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" formControlName="phone" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="position">Position Applied For</label>
+                                    <select id="position" formControlName="position" required>
+                                        <option value="angular">Angular Developer</option>
+                                        <option value="react">React Developer</option>
+                                        <option value="backend">Backend Developer</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="resume">Upload Resume</label>
+                                    <input type="file" id="resume" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Cover Letter</label>
+                                    <textarea id="message" rows="4" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="applybtn">Apply Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- <div class="experience-badge floating">
+                        <h3>1+ <span>Years</span></h3>
+                        <p>Of experience in IT services</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- /About Section -->

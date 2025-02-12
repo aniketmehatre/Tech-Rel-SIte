@@ -1,0 +1,27 @@
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a class="logo d-flex align-items-center me-auto me-xl-0" routerLink="/">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="../assets/img/logo 2 transparent .png" alt="">
+            <!-- <h1 class="sitename">SK-BIT</h1> -->
+        </a>
+
+        <nav id="navmenu" class="navmenu" [class.mobile-nav-active]="isMenuOpen">
+            <ul [class.active]="isMenuOpen">
+                <li><a href="#hero" class="active" (click)="closeMenu()">Home</a></li>
+                <li><a href="#about" (click)="closeMenu()">About</a></li>
+                <li><a href="#features" (click)="closeMenu()">Courses</a></li>
+                <li><a href="#services" (click)="closeMenu()">Features</a></li>
+                <li class="submenu"><a routerLink="/career" (click)="closeMenu()">Campus Drive</a></li>
+                <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"
+                (click)="toggleMenu()">
+            </i>
+        </nav>
+        <a class="btn-getstarted" href="">Get Demo</a>
+
+    </div>
+</header>

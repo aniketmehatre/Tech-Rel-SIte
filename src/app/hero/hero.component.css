@@ -1,0 +1,431 @@
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    position: relative;
+    padding-top: 110px;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
+    /* margin-top: -56px; */
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--accent-color), transparent 92%), transparent 40%);
+    pointer-events: none;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero .hero-content h1 .accent-text {
+    color: var(--accent-color);
+}
+
+@media (max-width: 992px) {
+    .hero .hero-content {
+        text-align: center;
+        margin-bottom: 3rem;
+
+    }
+
+    .hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .hero-content .hero-buttons {
+        justify-content: center;
+    }
+
+    /* .hero video {
+        display: none;
+    } */
+
+}
+
+
+.hero .company-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+    border-radius: 50px;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.hero .company-badge i {
+    font-size: 1.25rem;
+}
+
+.hero .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 0.75rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: color-mix(in srgb, var(--accent-color), black 20%);
+    border-color: color-mix(in srgb, var(--accent-color), black 20%);
+}
+
+.hero .btn-link {
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.hero .btn-link:hover {
+    color: var(--accent-color);
+}
+
+.hero .btn-link i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: center;
+    /* z-index: 1; */
+    margin-top: -150px;
+}
+
+#img-content {
+    margin-top: 50px;
+}
+
+.video-box {
+    position: relative;
+    z-index: -1;
+}
+
+.hero-image video {
+    position: absolute;
+    width: 130%;
+    outline: none;
+    max-width: 570px;
+    padding: 10px;
+    height: auto;
+    display: block;
+    margin: -500px;
+    margin-left: -20px;
+}
+
+.customers-badge {
+    position: absolute;
+    bottom: -405px;
+    right: -20px;
+    background-color: var(--surface-color);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 310px;
+    animation: float-badge 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+.hero .customers-badge .customer-avatars {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.hero .customers-badge .avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--surface-color);
+    margin-left: -8px;
+}
+
+.hero .customers-badge .avatar:first-child {
+    margin-left: 0;
+}
+
+.hero .customers-badge .avatar.more {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.blinking-badge {
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 2;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero .customers-badge p {
+    font-size: 0.875rem;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+@media (max-width: 992px) {
+    .hero .customers-badge {
+        position: static;
+        margin: 1rem auto;
+        max-width: 250px;
+    }
+
+    .hero .hero-image video {
+        display: none;
+    }
+}
+
+.hero .stats-row {
+    position: relative;
+    z-index: 1;
+    margin-top: 5rem;
+    background-color: var(--surface-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding-bottom: 2rem;
+}
+
+.hero .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.hero .stat-item .stat-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.hero .stat-item .stat-icon i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.hero .stat-item:hover .stat-icon {
+    background-color: var(--accent-color);
+}
+
+.hero .stat-item:hover .stat-icon i {
+    color: var(--contrast-color);
+}
+
+.hero .stat-item .stat-content {
+    flex-grow: 1;
+}
+
+.hero .stat-item .stat-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.hero .stat-item .stat-content p {
+    font-size: 0.875rem;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 575px) {
+    .hero .stat-item {
+        padding: 1.5rem;
+    }
+
+    .hero .company-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 0.8rem;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+        border-radius: 50px;
+        color: var(--accent-color);
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+@keyframes float-badge {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 575px) {
+    .hero .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .hero-content {
+        margin-top: -20px;
+    }
+
+    #P_tagline {
+        font-size: 10px;
+    }
+
+    .hero .btn-primary {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    .video-box {
+        top: -30px;
+    }
+}
+
+/* ------------ carousel --------------- */
+
+.carousel-box {
+    width: 100%;
+    height: 50%;
+}
+
+.courses-headline {
+    font-size: 2rem;
+}
+
+.courses-para {
+    font-size: 1.3rem;
+    margin: 20px 0px;
+}
+
+.courses-join-btn {
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 9px;
+    background: var(--primary-main-color);
+    border: none;
+}
+
+.courses-join-btn:hover {
+    background-color: var(--second-color);
+}
+
+.courses-join-btn:active {
+    color: var(--gray-color);
+}
+
+.carousel-container {
+    position: relative;
+    top: -25px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: -45px;
+    width: 112%;
+    height: 400px;
+    margin: 0;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.header-media-box {
+    display: flex;
+    gap: 20px;
+}
+.header-contact-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-whats-img-box {
+    width: 1.5rem;
+    height: 1.5rem;
+}

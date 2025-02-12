@@ -1,0 +1,505 @@
+/* ------ Home Banner Start ------ */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-img {
+    background-size: cover;
+}
+
+.banner-box {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 130px 52px;
+}
+
+.courses-headline {
+    text-transform: capitalize;
+    color: var(--gray-color);
+    font-size: 2rem;
+    margin: 20px 0px;
+}
+
+.courses-para {
+    text-transform: capitalize;
+    color: var(--gray-color);
+    margin: 20px 0px;
+}
+
+.courses-join-btn {
+    color: var(--gray-color);
+    background: var(--primary-main-color);
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    .banner-box {
+        padding: 70px;
+        padding-top: 130px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .banner-box {
+        padding: 60px 30px;
+        padding-top: 150px;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    .banner-box {
+        padding: 60px 20px;
+        padding-top: 120px;
+    }
+
+    .courses-headline {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .courses-headline {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .courses-headline {
+        font-size: 1.4rem;
+    }
+
+    .courses-para {
+        font-size: .9rem;
+    }
+}
+
+/* ------ Home Banner End ------ */
+
+/* ------ Campus Drive Start ------ */
+
+.our-campus-drive-box {
+    background-color: var(--gray-color);
+}
+
+.our-campus-drive-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.our-campus-drive-main-box {
+    padding: 30px 0px;
+
+}
+
+.drive-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 330px;
+}
+
+.drive-card {
+    width: 255px;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    height: 92%;
+}
+
+.left {
+    width: 50%;
+    line-height: 13px;
+}
+
+.bld {
+    font-weight: 500;
+}
+
+.company-name {
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.drive-role {
+    font-size: 1rem;
+}
+
+.passout-year {
+    font-size: .8rem;
+}
+
+.experience {
+    width: 130px;
+    text-align: center;
+    padding: 5px 0px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: var(--custom-gray);
+    font-size: .8rem;
+}
+
+.drive-img-box {
+    width: 90px;
+    height: 55px;
+}
+
+.drive-company-details {
+    line-height: 30px;
+    margin-top: 12px;
+}
+
+.drive-line {
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: 20px 0px;
+}
+
+.address {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.package-apply {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.apply {
+    padding: 8px 10px;
+    border: none;
+    background: var(--primary-main-color);
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--dark-color);
+}
+
+.apply:active {
+    color: var(--gray-color);
+}
+
+@media screen and (max-width:880px) {
+    .drive-card {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .apply {
+        padding: 7px 7px;
+    }
+
+    .address {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .drive-card {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width:515px) {
+    .drive-card {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .drive-card {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .drive-card {
+        margin: 0px 12px;
+    }
+}
+
+/* ------ Campus Drive End ------ */
+
+/* ------ Partenr Start ------ */
+
+.our-recruitment-partner-box {
+    padding: 30px 0px;
+}
+
+.our-recruitment-partner-main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-recruitment-partner-title {
+    text-align: center;
+}
+
+.line {
+    border: 2px solid orange;
+    width: 113px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tag-list {
+    width: 53rem;
+    max-width: 90vw;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1rem 0;
+    position: relative;
+    padding: 1.5rem 0;
+    overflow: hidden;
+}
+
+.loop-slider .inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    width: 100px;
+    height: 53px;
+    font-size: 0.9rem;
+    border-radius: 0.4rem;
+    padding: 6px 6px;
+    margin-right: 1rem;
+    /* box-shadow:
+        0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+        0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+        0 0.2rem 1.5rem rgb(0 0 0 / 40%); */
+    box-shadow: 0px 0px 0px var(--gray-color);
+}
+
+.fade {
+    pointer-events: none;
+    /* background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b); */
+    background-color: var(--gray-color);
+    position: absolute;
+    inset: 0;
+}
+
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ------ Partenr End ------ */
+
+/* ------ successfull alumni Start ------ */
+
+.successfull-alumni-main-box {
+    /* padding: 50px 0px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2px;
+
+}
+
+.tag-list {
+    width: 75rem;
+}
+
+.successfull-alumni-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 20px; */
+}
+
+.successfull-alumn-img-flex-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.successfull-alumni-img-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.alumni-name {
+    font-size: 1rem;
+}
+
+.alumni-role {
+    font-size: .9em;
+}
+
+.successfull-alumni-img-box img {
+    border-radius: 50%;
+}
+
+.img-and-details-box {
+    position: relative;
+    border-radius: 50%;
+}
+
+.tag2 {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    width: 250px;
+    height: 300px;
+    font-size: 0.9rem;
+    padding: 0;
+    border-radius: 0.4rem;
+    margin-right: 1rem;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+}
+
+.tag2 img {
+    border-radius: 10px;
+}
+
+.details-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--gray-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.img-and-details-box:hover .details-box {
+    display: flex;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.img-and-details-box:hover img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
+@media screen and (max-width:700px) {
+    .tag2 {
+        width: 220px;
+        height: 270px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .successfull-alumn-img-flex-box {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .successfull-alumn-img-flex-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .successfull-alumni-title {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+}
+
+/* ------ successfull alumni End ------ */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* Space between cards */
+    justify-content: center;
+    /* Center the cards */
+}
+
+.drive-card {
+    flex: 1 1 calc(33.333% - 32px);
+    /* Three cards per row with some margin */
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.drive-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+}
+
+.drive-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.drive-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 4px 0;
+}
+
+.apply-now {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.apply-now:hover {
+    background-color: #0056b3;
+}
