@@ -99,3 +99,21 @@
 }
 
 /*** Feature End ***/
+
+@media (max-width: 720px) {
+  .featuretagline {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:345px) {
+  .about-meta {
+    font-size: 24px;
+  }
+  .featureheadline{
+    font-size: 16px;
+  }
+  .featuretagline{
+    font-size: 10px;
+  }
+}

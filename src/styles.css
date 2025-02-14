@@ -258,9 +258,12 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 345px) {
   .navmenu {
     margin: 0;
     /* width: 100%; Prevent it from exceeding viewport width */
+  }
+  .section-title h2 {
+    font-size: 24px;
   }
 }

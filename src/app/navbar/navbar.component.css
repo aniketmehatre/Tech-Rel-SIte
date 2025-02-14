@@ -381,3 +381,11 @@ a {
     }
 
 }
+
+@media (max-width: 375px) {
+    .header .logo img {
+        max-height: 35px;
+        margin-right: 60px;
+    }
+    
+}

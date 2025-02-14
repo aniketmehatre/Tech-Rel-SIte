@@ -96,3 +96,10 @@ img {
 }
 
 /* ------ Partenr End ------ */
+
+@media (max-width:345px) {
+    .our-recruitment-partner-title {
+        font-size: 18px;
+    }
+    
+}

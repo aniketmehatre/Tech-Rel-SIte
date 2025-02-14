@@ -661,3 +661,9 @@ img {
 .starter-section {
   color: red;
 }
+
+@media (max-width:345px){
+  .services .service-card h3 {
+    font-size:18px;
+}
+}

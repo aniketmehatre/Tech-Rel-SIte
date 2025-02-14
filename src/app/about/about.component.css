@@ -20,6 +20,10 @@
   .about .about-title {
     font-size: 2rem;
   }
+
+  #about_us {
+    width: 100% !important;
+  }
 }
 
 .about .about-description {
@@ -192,4 +196,43 @@
   100% {
     transform: translateY(0);
   }
+}
+
+@media (max-width:345px) {
+  .about .image-wrapper .experience-badge {
+    min-width: 160px;
+    padding: 10px;
+  }
+
+  .about .image-wrapper .experience-badge h3 {
+    color: var(--contrast-color);
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 0.5;
+  }
+
+  .about .image-wrapper .experience-badge h3 span {
+    font-size: 0.8rem;
+  }
+
+  .about .image-wrapper .experience-badge p {
+    font-size: 0.8rem;
+  }
+
+  #about_us {
+
+    width: 93% !important;
+    /* padding: 2px 124px; */
+    margin: 10px;
+  }
+  .about .about-title {
+    font-size: 1.4rem;
+  }
+.about .about-description {
+font-size: 0.8rem;
+}
+.about .feature-list li{
+  font-size: 0.8rem;
+}
+
 }
