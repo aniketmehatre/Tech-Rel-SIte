@@ -37,7 +37,7 @@
 --------------------------------------------------------------*/
 .hero {
     position: relative;
-    padding-top: 110px;
+    padding-top: 10px;
     background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
     /* margin-top: -56px; */
 }
@@ -479,5 +479,115 @@
         font-size: 1rem;
         margin-bottom: 0.25rem;
         font-weight: 600;
+    }
+}
+
+/* free demo session form  */
+/* Modal Styles */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: var(--surface-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Input Fields */
+input,
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*  */
+.linkWrap {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.style-30 {
+    font-family: var(--default-font);
+    position: relative;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+    padding: 10px 40px;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    color: var(--surface-color);
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        transform: skewX(30deg);
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: -2;
+    }
+
+    &::before {
+        background-color: var(--accent-color);
+        top: -4px;
+        left: 25px;
+    }
+
+    &::after {
+        background-color: var(--accent-color);
+        top: 4px;
+        right: 34px;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        top: 0;
+        transform: skewx(0deg);
+    }
+
+    &:hover::after {
+        right: 130px;
+    }
+
+    &:hover::before {
+        left: 130px;
     }
 }

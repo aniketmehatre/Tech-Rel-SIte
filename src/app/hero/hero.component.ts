@@ -19,18 +19,28 @@ import * as Aos from 'aos';
   ],
 })
 export class HeroComponent implements OnInit {
-mail() {
-throw new Error('Method not implemented.');
-}
-whatAppChat() {
-throw new Error('Method not implemented.');
-}
-instagram() {
-throw new Error('Method not implemented.');
-}
-facebook() {
-throw new Error('Method not implemented.');
-}
+  isModalOpen: boolean = false;
+
+  formData = {
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  submitForm() {
+    console.log('Form Data:', this.formData);
+    alert('Form submitted successfully!');
+    this.closeModal(); // Form submit hone ke baad modal band ho jayega
+  }
 
   slides: any = [];
   currentIndex = 0
@@ -51,7 +61,7 @@ throw new Error('Method not implemented.');
       this.showNextSlide();
       console.log('hiii');
 
-    }, 4000); 
+    }, 4000);
   }
 
   showNextSlide() {
