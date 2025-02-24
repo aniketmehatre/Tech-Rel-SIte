@@ -17,6 +17,15 @@ import { EnvironmentComponent } from './environment/environment.component';
 import { CommunityComponent } from './community/community.component';
 import { PlacedStudentsComponent } from './placed-students/placed-students.component';
 import { CompanyComponent } from './company/company.component';
+import { JavaComponent } from './courses/java/java.component';
+import { MernComponent } from './courses/mern/mern.component';
+import { MeanComponent } from './courses/mean/mean.component';
+import { DotnetComponent } from './courses/dotnet/dotnet.component';
+import { TestingComponent } from './courses/testing/testing.component';
+import { DevopsComponent } from './courses/devops/devops.component';
+import { MoreAboutComponent } from './about/more-about/more-about.component';
+import { ContactBtnComponent } from './contact-btn/contact-btn.component';
+import { PopUpFromComponent } from './pop-up-from/pop-up-from.component';
 
 
 @NgModule({
@@ -35,7 +44,16 @@ import { CompanyComponent } from './company/company.component';
     EnvironmentComponent,
     CommunityComponent,
     PlacedStudentsComponent,
-    CompanyComponent
+    CompanyComponent,
+    JavaComponent,
+    MernComponent,
+    MeanComponent,
+    DotnetComponent,
+    TestingComponent,
+    DevopsComponent,
+    MoreAboutComponent,
+    ContactBtnComponent,
+    PopUpFromComponent
   ],
   imports: [
     BrowserModule,

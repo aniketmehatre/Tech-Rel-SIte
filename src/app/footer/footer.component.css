@@ -24,13 +24,19 @@ img {
 
 /* Footer Left Section */
 .footer .footer-about {
-    
+
     max-width: 300px;
+}
+
+.footermain {
+    justify-content: center
 }
 
 .footer .footer-about .logo {
     line-height: 1;
     margin-bottom: 15px;
+    margin-left: 44px;
+
 }
 
 .footerimg {
@@ -49,10 +55,12 @@ img {
     margin-top: 10px;
 }
 
-.footer .social-links {
+.footer .social-linksa {
     display: flex;
     justify-content: flex-start;
-    margin-top: 10px;
+    margin-top: -20px;
+    margin-left: 25px;
+
 }
 
 .footer .social-links a {
@@ -76,7 +84,7 @@ img {
 
 /* Footer Right Section */
 .footer .footer-links {
-    text-align: right;
+    text-align: left;
     margin-top: 10px;
 }
 
@@ -215,7 +223,8 @@ img {
     .footer .copyright p {
         font-size: 10px;
     }
-    .social-linksa{
+
+    .social-linksa {
         display: flex;
         justify-content: start;
         margin: 0px;

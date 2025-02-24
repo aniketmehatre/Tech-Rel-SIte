@@ -1,25 +1,43 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
+  isPopupVisible: boolean = false;
+  title = 'TechRel';
 
-  title = 'sk-bit';
+  constructor(
+    private router: Router
+  ) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0); // Scroll to top
+      }
+    });
+  }
+
 
   onWindowLoad = () => {
     console.log('Window has loaded!');
   };
 
   ngOnInit(): void {
-    window.addEventListener('load', this.onWindowLoad);
+    if (window.performance.navigation.type === 1) {
+      this.router.navigate(['/']);
+    }
   }
 
-  ngOnDestroy(): void {
-    window.removeEventListener('load', this.onWindowLoad);
+  showPopup() {
+    setTimeout(() => {
+      this.isPopupVisible = true;
+    }, 1000)
   }
 
+  closePopup() {
+    this.isPopupVisible = false;
+  }
 }

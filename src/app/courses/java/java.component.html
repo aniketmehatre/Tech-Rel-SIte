@@ -1,0 +1,98 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 right">
+                <div class="first">
+                    <h2>Java Full Stack Development <br> Course Syllabus</h2>
+                    <a href="#" class="download-btn" data-bs-toggle="modal" data-bs-target="#brochureModal">Download
+                        Brochure <i class="bi bi-cloud-arrow-down"></i></a>
+                </div>
+                <hr>
+                <h4><span style="color: orange;">Course Duration: </span> 4 Months Training + 2 Months Live Project</h4>
+                <p>The Java Full Stack Development Course equips you with the skills needed to build modern web
+                    applications from scratch. Learn both front-end and back-end technologies, along with database
+                    management and cloud deployment.</p>
+
+                <div class="faq-container">
+                    <div *ngFor="let faq of faqs; let i = index" class="faq-item">
+                        <div class="faq-question" (click)="toggleFAQ(i)">
+                            {{ faq.question }}
+                            <span class="arrow" [class.open]="faq.open">&#x25BC;</span>
+                        </div>
+                        <div class="faq-answer" [class.show]="faq.open" [innerHTML]="faq.answer"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form col-md-4 right">
+                <div class="card p-4 shadow">
+                    <h4 class="text-center mb-3">Inquiry</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mobile" class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" id="mobile" placeholder="Enter your mobile number"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email ID</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email ID"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="1" placeholder="Enter your message"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="download-btn w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="placedstud">
+    <app-placed-students></app-placed-students>
+</div>
+<div>
+    <app-company></app-company>
+</div>
+<!-- Brochure Modal -->
+<div class="modal fade" id="brochureModal" tabindex="-1" aria-labelledby="brochureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content brochure-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="brochureModalLabel">Download Brochure</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your interest in our Java Full Stack Development Course.</p>
+                <p>Please find the brochure attached.</p>
+                <a href="#" class="btn btn-primary">Download Now <i class="bi bi-cloud-arrow-down"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container mt-4">
+    <h3 class="mb-4">Frequently Asked Questions</h3>
+
+    <div *ngFor="let faq of faqs; let i = index">
+        <div class="question">
+            {{ faq.question }}
+            <span class="float-end">{{ faq.open ? '-' : '+' }}</span>
+        </div>
+        <div class="answer" *ngIf="faq.open">
+            {{ faq.answer }}
+        </div>
+    </div>
+</div> -->

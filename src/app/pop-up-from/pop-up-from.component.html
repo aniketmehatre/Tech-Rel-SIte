@@ -1,0 +1,23 @@
+<div id="popup-reg" class="popup active">
+    <div class="popup-content">
+        <div class="event-header">
+            <h5>Contact Us</h5>
+        </div>
+        <form id="send" class="send-form" >
+            <div class="form-group">
+                <input type="text" placeholder="Enter name..." formControlName="name" required="required">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Enter email..." formControlName="email" required="required">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Enter phone..." formControlName="phone" required="required">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Enter message..." formControlName="message" id="text"></textarea>
+            </div>
+            <button type="submit" class="main-btn-rect">Send</button>
+        </form>
+        <span class="fade-out main-btn-circle" (click)="closePopup()">╳</span>
+    </div>
+</div>

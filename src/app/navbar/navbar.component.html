@@ -3,25 +3,43 @@
         class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
         <a class="logo d-flex align-items-center me-auto me-xl-0" routerLink="/">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="../assets/img/logo 2 transparent .png" alt="">
-            <!-- <h1 class="sitename">SK-BIT</h1> -->
         </a>
 
         <nav id="navmenu" class="navmenu" [class.mobile-nav-active]="isMenuOpen">
             <ul [class.active]="isMenuOpen">
                 <li><a href="#hero" class="active" (click)="closeMenu()">Home</a></li>
                 <li><a href="#about" (click)="closeMenu()">About</a></li>
-                <li><a href="#features" (click)="closeMenu()">Courses</a></li>
+
+                <li class="dropdown" [class.show-dropdown]="activeDropdown === 'courses'">
+                    <a (click)="toggleDropdown($event)">
+                        <span>Courses</span>
+                        <i class="bi" [ngClass]="isCoursesDropdownOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                    </a>
+
+                    <ul id="navbar-submenu" *ngIf="isCoursesDropdownOpen">
+                        <li><a routerLink="courses/java">Java Full Stack</a></li>
+                        <li><a routerLink="courses/mern">MERN Stack</a></li>
+                        <li><a routerLink="courses/mean">MEAN Stack</a></li>
+                        <li><a routerLink="courses/devops">DevOps / AWS</a></li>
+                        <li><a routerLink="courses/testing">Software Testing</a></li>
+                        <li><a routerLink="courses/dotnet">Dot Net Full Stack</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#services" (click)="closeMenu()">Features</a></li>
                 <li class="submenu"><a routerLink="/career" (click)="closeMenu()">Campus Drive</a></li>
-                <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+                <li><a href="#contactUs" (click)="closeMenu()">Contact</a></li>
             </ul>
+
             <i class="mobile-nav-toggle d-xl-none bi" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"
                 (click)="toggleMenu()">
             </i>
         </nav>
-        <a class="btn-getstarted" href="">Get Demo</a>
+        <a href="#contactUs" class="btn-getstarted">
+            <i class="fa fa-phone"></i> +91 800-724-3000
+        </a>
+
 
     </div>
 </header>

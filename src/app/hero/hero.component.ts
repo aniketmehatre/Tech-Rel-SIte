@@ -1,7 +1,6 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as Aos from 'aos';
-import { ScrollService } from '../shared/scroll.service';
 
 @Component({
   selector: 'app-hero',
@@ -52,7 +51,7 @@ throw new Error('Method not implemented.');
       this.showNextSlide();
       console.log('hiii');
 
-    }, 4000); // Adjust interval as needed
+    }, 4000); 
   }
 
   showNextSlide() {

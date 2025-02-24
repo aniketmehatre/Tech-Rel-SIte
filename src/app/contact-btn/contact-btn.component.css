@@ -1,0 +1,127 @@
+.email-bt {
+    background: var(--primary-main-color);
+    border: 2px solid var(--primary-main-color);
+    border-radius: 50%;
+    box-shadow: 0 8px 10px rgba(249, 92, 24, 0.3);
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    position: fixed;
+    left: 3%;
+    bottom: 5%;
+    z-index: 999;
+    transition: .3s;
+    animation: email-an linear 1s infinite;
+}
+
+.email-bt:hover {
+    border: 2px solid green;
+}
+
+.email-bt .text-call {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+}
+
+svg {
+    width: 50%;
+    height: 50%;
+    color: white;
+}
+
+.email-bt .text-call span {
+    text-align: center;
+    color: #F95C18;
+    opacity: 0;
+    font-size: 0;
+    position: absolute;
+    right: 4px;
+    top: 22px;
+    line-height: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: opacity 5s linear;
+    font-family: 'montserrat', Arial, Helvetica, sans-serif;
+}
+
+.email-bt .text-call:hover span {
+    opacity: 1;
+    font-size: 11px;
+}
+
+.email-bt .text-call:hover span {
+    opacity: 1;
+    font-size: 11px;
+}
+
+.email-bt:hover svg {
+    color: green;
+}
+
+.email-bt:hover {
+    z-index: 1;
+    background: #fff;
+    transition: .3s;
+}
+
+.email-bt:hover i {
+    color: #38a3fd;
+    font-size: 40px;
+    transition: .3s;
+}
+
+.email-bt i {
+    color: #fff;
+    font-size: 29px;
+    transition: .3s;
+    line-height: 66px;
+}
+
+.email-bt i {
+    -webkit-animation: opsimple 3s infinite;
+    animation: opsimple 3s infinite;
+}
+
+@keyframes email-an {
+    0% {
+        box-shadow: 0 8px 10px rgba(249, 92, 24, 0.3), 0 0 0 0 rgba(249, 92, 24, 0.2), 0 0 0 0 rgba(249, 92, 24, 0.2)
+    }
+
+    40% {
+        box-shadow: 0 8px 10px rgba(249, 92, 24, 0.3), 0 0 0 15px rgba(249, 92, 24, 0.2), 0 0 0 0 rgba(249, 92, 24, 0.2)
+    }
+
+    80% {
+        box-shadow: 0 8px 10px rgba(249, 92, 24, 0.3), 0 0 0 30px rgba(249, 92, 24, 0), 0 0 0 26.7px rgba(249, 92, 24, 0.067)
+    }
+
+    100% {
+        box-shadow: 0 8px 10px rgba(249, 92, 24, 0.3), 0 0 0 15px rgba(249, 92, 24, 0), 0 0 0 25px rgba(249, 92, 24, 0.0)
+    }
+}
+
+@keyframes opsimple {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

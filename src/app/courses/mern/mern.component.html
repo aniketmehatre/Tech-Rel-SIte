@@ -1,0 +1,85 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 right">
+                <div class="first">
+                    <h2>MERN Stack Development <br> Course Syllabus</h2>
+                    <a href="#" class="download-btn" data-bs-toggle="modal" data-bs-target="#brochureModal">Download
+                        Brochure <i class="bi bi-cloud-arrow-down"></i></a>
+                </div>
+                <hr>
+                <h4><span style="color: orange;">Course Duration: </span> 4 Months Training + 2 Months Live Project</h4>
+                <p>The MERN Stack (MongoDB, Express.js, React, and Node.js) is a full-stack JavaScript framework used
+                    for building modern
+                    web applications. This course will provide hands-on experience in developing scalable and efficient
+                    web applications
+                    using MongoDB for the database, Express.js for the backend, React.js for the frontend, and Node.js
+                    as the server
+                    environment.</p>
+
+                <div class="faq-container">
+                    <div *ngFor="let faq of faqs; let i = index" class="faq-item">
+                        <div class="faq-question" (click)="toggleFAQ(i)">
+                            {{ faq.question }}
+                            <span class="arrow" [class.open]="faq.open">&#x25BC;</span>
+                        </div>
+                        <div class="faq-answer" [class.show]="faq.open" [innerHTML]="faq.answer"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form col-md-4 right">
+                <div class="card p-4 shadow">
+                    <h4 class="text-center mb-3">Inquiry</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mobile" class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" id="mobile" placeholder="Enter your mobile number"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email ID</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email ID"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="1" placeholder="Enter your message"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="download-btn w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="placedstud">
+    <app-placed-students></app-placed-students>
+</div>
+<app-company></app-company>
+
+<!-- Brochure Modal -->
+<div class="modal fade" id="brochureModal" tabindex="-1" aria-labelledby="brochureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content brochure-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="brochureModalLabel">Download Brochure</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your interest in our Java Full Stack Development Course.</p>
+                <p>Please find the brochure attached.</p>
+                <a href="#" class="btn btn-primary">Download Now <i class="bi bi-cloud-arrow-down"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

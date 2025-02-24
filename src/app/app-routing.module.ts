@@ -11,6 +11,12 @@ import { MainlandingpageComponent } from './mainlandingpage/mainlandingpage.comp
 import { CultureComponent } from './culture/culture.component';
 import { EnvironmentComponent } from './environment/environment.component';
 import { CommunityComponent } from './community/community.component';
+import { JavaComponent } from './courses/java/java.component';
+import { MernComponent } from './courses/mern/mern.component';
+import { MeanComponent } from './courses/mean/mean.component';
+import { TestingComponent } from './courses/testing/testing.component';
+import { DevopsComponent } from './courses/devops/devops.component';
+import { DotnetComponent } from './courses/dotnet/dotnet.component';
 
 const routes: Routes = [
   {
@@ -41,7 +47,25 @@ const routes: Routes = [
     path: 'environment', component: EnvironmentComponent
   },
   {
-    path: 'community' , component: CommunityComponent
+    path: 'community', component: CommunityComponent
+  },
+  {
+    path: 'courses/java', component: JavaComponent
+  },
+  {
+    path: 'courses/mern', component: MernComponent
+  },
+  {
+    path: 'courses/mean', component: MeanComponent
+  },
+  {
+    path: 'courses/testing', component: TestingComponent
+  },
+  {
+    path: 'courses/devops', component: DevopsComponent
+  },
+  {
+    path: 'courses/dotnet', component: DotnetComponent
   }
 ];
 

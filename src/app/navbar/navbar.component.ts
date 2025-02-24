@@ -7,10 +7,12 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-
+  isPopupVisible: boolean = false;
   isMenuOpen: boolean = false;
   isOpensubmenu: boolean = false;
   activeItem = 'Home';
+  activeDropdown: string | null = null;
+  isCoursesDropdownOpen = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -23,10 +25,6 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  toggleDropdown() {
-    console.log(this.isOpensubmenu);
-    this.isOpensubmenu = !this.isOpensubmenu;
-  }
 
   // Close menu when clicking outside
   closeMenuOnOutsideClick = (event: Event) => {
@@ -45,16 +43,37 @@ export class NavbarComponent implements OnInit {
     this.isOpensubmenu = false;
     document.removeEventListener('click', this.closeMenuOnOutsideClick);
   }
+
+
   closeMenu() {
     this.isMenuOpen = false;
     this.isOpensubmenu = false;
     document.removeEventListener('click', this.closeMenuOnOutsideClick);
   }
+
   ngOnInit(): void { }
 
 
   setActive(item: string) {
     this.activeItem = item;
     this.isMenuOpen = false;
+  }
+  showPopup() {
+    setTimeout(() => {
+      this.isPopupVisible = true;
+    }, 1000)
+  }
+
+  closePopup() {
+    this.isPopupVisible = false;
+  }
+
+  toggleDropdown(event: Event) {
+    event.stopPropagation(); // Prevent menu from closing when clicking inside dropdown
+    this.isCoursesDropdownOpen = !this.isCoursesDropdownOpen;
+  }
+  @HostListener('document:click', ['$event'])
+  closeDropdownOutside(event: Event) {
+    this.isCoursesDropdownOpen = false;
   }
 }

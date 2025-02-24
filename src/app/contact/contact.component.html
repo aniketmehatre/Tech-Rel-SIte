@@ -13,32 +13,41 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3028833543503!2d73.83973427389763!3d18.51521006934052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2be4ceaaaaaab%3A0x4f424a5c1800628f!2sTechRel%20technologies%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1720851661558!5m2!1sen!2sin"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="contact-form-box">
-                    <form class="form">
-                        <div class="inputBox">
-                            <div class="inputBox-flex">
-                                <div class="inputBox-name">
-                                    <input type="text" formControlName="user_name" placeholder="Name">
-                                </div>
-                                <div class="inputBox-email">
-                                    <input type="email" formControlName="user_email" placeholder="Email">
+                <div class="container">
+                    <div class="contact-form-box">
+                        <form class="form">
+                            <div class="inputBox">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="inputBox-name">
+                                            <input type="text" formControlName="user_name" class="form-control"
+                                                placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="inputBox-email">
+                                            <input type="email" formControlName="user_email" class="form-control"
+                                                placeholder="Email">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="inputBox">
-                            <input type="text" formControlName="user_subject" class="diff-input diff-input2"
-                                placeholder="Subject">
-                        </div>
+                            <div class="inputBox mt-3">
+                                <input type="text" formControlName="user_subject"
+                                    class="diff-input diff-input2 form-control" placeholder="Subject">
+                            </div>
 
-                        <div class="inputBox">
-                            <textarea class="diff-input diff-input2" formControlName="user_message"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <div class="inputBox">
-                            <button type="submit" class="inputSubmitBtn">Submit</button>
-                        </div>
-                    </form>
+                            <div class="inputBox mt-3">
+                                <textarea class="diff-input diff-input2 form-control" formControlName="user_message"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <div class="inputBox mt-3 text-center">
+                                <button type="submit" class="inputSubmitBtn btn btn-primary w-100">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

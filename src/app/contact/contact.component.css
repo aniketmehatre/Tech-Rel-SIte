@@ -51,7 +51,7 @@
 
 .inputBox-name,
 .inputBox-email {
-  width: 47%;
+  width: 100%;
 }
 
 .inputBox {
@@ -87,25 +87,29 @@ textarea,
 @media (max-width: 720px) {
   .contact-form {
     display: block;
-    padding: 20px 20px; 
+    padding: 20px 20px;
   }
+
   .inputBox input,
   textarea,
-  .inputSubmitBtn{
+  .inputSubmitBtn {
     width: 100%;
-  padding: 8px 10px;
-  font-size: 12px;
+    padding: 8px 10px;
+    font-size: 12px;
   }
-  .inputBox .inputSubmitBtn{
+
+  .inputBox .inputSubmitBtn {
     width: 100%;
     font-size: 12px;
   }
 }
+
 @media (max-width: 345px) {
-  #contactUs .contact-box .contact-main-box .contact-title{
+  #contactUs .contact-box .contact-main-box .contact-title {
     font-size: 18px;
   }
-  .contact-para{
+
+  .contact-para {
     font-size: 12px;
   }
 }
