@@ -43,6 +43,7 @@
 
     </div>
 </header> -->
+
 <!-- start top bar  -->
 <header id="header" class="header fixed-top">
 
@@ -69,12 +70,12 @@
     <div class="branding d-flex align-items-cente">
 
         <div class="container position-relative d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="hero" class="logo d-flex align-items-center">
                 <img src="../assets/img/logo 2 transparent .png" alt="">
             </a>
 
-            <nav id="navmenu" class="navmenu">
-                <ul>
+            <nav id="navmenu" class="navmenu" [class.mobile-nav-active]="isMenuOpen">
+                <ul [class.active]="isMenuOpen">
                     <li><a href="#hero" class="active" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
                     <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
                     <li><a href="#feature" routerLinkActive="active" (click)="closeMenu()">Placed Students</a></li>
@@ -93,7 +94,8 @@
 
                     <li><a href="#contactUs" (click)="closeMenu()" routerLinkActive="active">Contact</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"
+                    (click)="toggleMenu()"></i>
             </nav>
 
         </div>

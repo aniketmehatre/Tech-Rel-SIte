@@ -196,8 +196,16 @@
 
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
-    .topbar {
-        display: none;
+    .topbar .new-batch {
+        font-size: 15px;
+    }
+
+    .contact-info {
+        display: none !important;
+    }
+
+    img {
+        width: 100px;
     }
 
     .mobile-nav-toggle {
