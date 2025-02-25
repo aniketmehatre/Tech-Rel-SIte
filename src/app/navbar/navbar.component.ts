@@ -15,6 +15,25 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   activeItem = 'Home';
   activeDropdown: string | null = null;
   isCoursesDropdownOpen = false;
+  isTopbarHidden: boolean = false;
+  lastScrollTop: number = 0;
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > this.lastScrollTop) {
+      // Scrolling Down - Hide Top Bar
+      this.isTopbarHidden = true;
+    } else {
+      // Scrolling Up - Show Top Bar
+      this.isTopbarHidden = false;
+    }
+
+    this.lastScrollTop = scrollTop;
+  }
+
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

@@ -1,4 +1,4 @@
-<header id="header" class="header d-flex align-items-center fixed-top">
+<!-- <header id="header" class="header d-flex align-items-center fixed-top">
     <div
         class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -42,15 +42,15 @@
 
 
     </div>
-</header>
+</header> -->
 <!-- start top bar  -->
-<header id="header" class="header sticky-top">
+<header id="header" class="header fixed-top">
 
     <div class="topbar d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
                 <i class="bi bi-envelope d-flex align-items-center"><a
-                        href="mailto:contact@example.com">info@techrel.in</a></i>
+                        href="mailto:info@techrel.in">info@techrel.in</a></i>
                 <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 800-724-3000</span></i>
             </div>
             <div class="new-batch">
@@ -63,7 +63,8 @@
                 <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
-    </div><!-- End Top Bar -->
+    </div>
+    <!-- End Top Bar -->
 
     <div class="branding d-flex align-items-cente">
 
@@ -74,23 +75,23 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active" (click)="closeMenu()">Home</a></li>
-                    <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
-                    <li><a href="#feature" (click)="closeMenu()">Placed Students</a></li>
+                    <li><a href="#hero" class="active" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+                    <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+                    <li><a href="#feature" routerLinkActive="active" (click)="closeMenu()">Placed Students</a></li>
                     <li class="dropdown"><a href="#"><span>Courses</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a routerLink="courses/java">Java Full Stack</a></li>
-                            <li><a routerLink="courses/mern">MERN Stack</a></li>
-                            <li><a routerLink="courses/mean">MEAN Stack</a></li>
-                            <li><a routerLink="courses/devops">DevOps / AWS</a></li>
-                            <li><a routerLink="courses/testing">Software Testing</a></li>
+                            <li><a routerLink="courses/java" routerLinkActive="active">Java Full Stack</a></li>
+                            <li><a routerLink="courses/mern" routerLinkActive="active">MERN Stack</a></li>
+                            <li><a routerLink="courses/mean" routerLinkActive="active">MEAN Stack</a></li>
+                            <li><a routerLink="courses/devops" routerLinkActive="active">DevOps / AWS</a></li>
+                            <li><a routerLink="courses/testing" routerLinkActive="active">Software Testing</a></li>
                             <li><a routerLink="courses/dotnet">Dot Net Full Stack</a></li>
                         </ul>
                     </li>
-                    <li><a routerLink="/career" (click)="closeMenu()">Campus Drive</a></li>
+                    <li><a routerLink="/career" (click)="closeMenu()" routerLinkActive="active">Campus Drive</a></li>
 
-                    <li><a href="#contactUs" (click)="closeMenu()">Contact</a></li>
+                    <li><a href="#contactUs" (click)="closeMenu()" routerLinkActive="active">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

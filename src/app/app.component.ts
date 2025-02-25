@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  isTopbarHidden: boolean = false;
+  lastScrollTop: number = 0;
   isPopupVisible: boolean = false;
   title = 'TechRel';
 
@@ -20,6 +22,21 @@ export class AppComponent implements OnInit {
     });
   }
 
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > this.lastScrollTop) {
+      // Scrolling Down - Hide Top Bar
+      this.isTopbarHidden = true;
+    } else {
+      // Scrolling Up - Show Top Bar
+      this.isTopbarHidden = false;
+    }
+
+    this.lastScrollTop = scrollTop;
+  }
 
   onWindowLoad = () => {
     console.log('Window has loaded!');

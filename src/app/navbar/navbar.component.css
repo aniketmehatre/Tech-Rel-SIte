@@ -3,13 +3,14 @@
     transition: all 0.5s;
     z-index: 997;
     background-color: var(--background-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header .topbar {
     background-color: var(--accent-color);
-    height: 40px;
+    height: 35px;
     padding: 0;
-    font-size: 14px;
+    font-size: 15px;
     transition: all 0.5s;
 }
 
@@ -28,7 +29,7 @@
 
     .header .topbar .contact-info i a,
     .header .topbar .contact-info i span {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
@@ -55,8 +56,8 @@
 
 .header .branding {
     background-color: var(--background-color);
-    min-height: 60px;
-    padding: 10px 0;
+    min-height: 40px;
+    padding: 5px 0;
 }
 
 .header .logo {
@@ -109,14 +110,12 @@
     .navmenu a,
     .navmenu a:focus {
         color: var(--nav-color);
-        padding: 18px 15px;
+        padding: 10px 15px;
         font-size: 17px;
-        font-family: var(--nav-font);
         font-weight: 500;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* white-space: nowrap; */
         transition: 0.3s;
     }
 
@@ -197,6 +196,10 @@
 
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
+    .topbar {
+        display: none;
+    }
+
     .mobile-nav-toggle {
         color: var(--nav-color);
         font-size: 28px;
