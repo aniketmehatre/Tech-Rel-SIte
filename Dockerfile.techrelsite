@@ -1,0 +1,29 @@
+# Step 1: Build the Angular app using a Node.js image
+FROM node:18 AS build
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json into the container
+COPY package.json package-lock.json ./
+
+# Install project dependencies with the legacy-peer-deps flag to bypass peer dependency conflicts
+RUN npm install --legacy-peer-deps
+
+# Copy the rest of the Angular app source code into the container
+COPY . .
+
+# Build the Angular app in production mode
+RUN npm run build --prod
+
+# Step 2: Serve the app using Nginx
+FROM nginx:alpine
+
+# Copy the built Angular app from the build stage to Nginx's web directory
+COPY --from=build /app/dist/techrelsite /usr/share/nginx/html
+
+# Expose port 80 for Nginx
+EXPOSE 81
+
+# Start Nginx to serve the Angular app
+CMD ["nginx", "-g", "daemon off;"]
