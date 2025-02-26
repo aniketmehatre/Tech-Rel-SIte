@@ -41,10 +41,10 @@ const routes: Routes = [
     path: 'career', component: CareerComponent
   },
   {
-    path: 'culture', component: CultureComponent
+    path: 'mock-test', component: CultureComponent
   },
   {
-    path: 'environment', component: EnvironmentComponent
+    path: 'placed-students', component: EnvironmentComponent
   },
   {
     path: 'community', component: CommunityComponent

@@ -303,7 +303,8 @@
 
 @media (max-width: 575px) {
     .hero .stat-item {
-        padding: 1.5rem;
+        padding: 1.2rem 1.5rem;
+        margin-top: -20px;
     }
 
     .hero .company-badge {
@@ -374,7 +375,10 @@
     }
 
     #P_tagline {
-        font-size: 10px;
+        font-size: 12px;
+        text-align: center;
+        width: 210px;
+        margin-left: 30px;
     }
 
     .hero .btn-primary {
@@ -465,8 +469,8 @@
 
 @media (max-width:375px) {
     .hero .company-badge {
-        width: 67%;
-        font-size: 10px;
+        width: 90%;
+        font-size: 14px;
     }
 
     .hero .stat-item .stat-icon {
@@ -588,5 +592,52 @@ textarea {
 
     &:hover::before {
         left: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .linkWrap {
+        margin-top: -7px;
+        margin-bottom: 10px;
+    }
+
+    .style-30 {
+        font-size: 14px;
+        padding: 8px 30px;
+
+        &:before,
+        &:after {
+            width: 45%;
+            transform: skewX(25deg);
+        }
+
+        &:hover::after {
+            right: 90px;
+        }
+
+        &:hover::before {
+            left: 90px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .style-30 {
+        font-size: 12px;
+        padding: 9px 40px;
+
+        &:before,
+        &:after {
+            width: 40%;
+            transform: skewX(20deg);
+        }
+
+        &:hover::after {
+            right: 70px;
+        }
+
+        &:hover::before {
+            left: 70px;
+        }
     }
 }

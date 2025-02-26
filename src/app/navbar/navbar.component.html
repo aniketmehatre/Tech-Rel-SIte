@@ -52,15 +52,16 @@
             <div class="contact-info d-flex align-items-center">
                 <i class="bi bi-envelope d-flex align-items-center"><a
                         href="mailto:info@techrel.in">info@techrel.in</a></i>
-                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 800-724-3000</span></i>
+                <i class="bi bi-phone d-flex align-items-center ms-4" (click)="makeCall()"><span>+91
+                        800-724-3000</span></i>
             </div>
             <div class="new-batch">
                 <div class="typewriter">*New Batch Starts From 15-March-2025*</div>
             </div>
             <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/message/D4ULEOA5NGXZL1" class="twitter"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.facebook.com/TechRelindia/" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/techrel_pune" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
@@ -78,7 +79,8 @@
                 <ul [class.active]="isMenuOpen">
                     <li><a href="#hero" class="active" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
                     <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
-                    <li><a href="#feature" routerLinkActive="active" (click)="closeMenu()">Placed Students</a></li>
+                    <li><a routerLink="/placed-students" routerLinkActive="active" (click)="closeMenu()">Placed Students</a>
+                    </li>
                     <li class="dropdown"><a href="#"><span>Courses</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -91,7 +93,7 @@
                         </ul>
                     </li>
                     <li><a routerLink="/career" (click)="closeMenu()" routerLinkActive="active">Campus Drive</a></li>
-
+                    <li><a routerLink="/mock-test" (click)="closeMenu()" routerLinkActive="active">Mock Test</a></li>
                     <li><a href="#contactUs" (click)="closeMenu()" routerLinkActive="active">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"

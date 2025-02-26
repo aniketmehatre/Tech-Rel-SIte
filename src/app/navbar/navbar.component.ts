@@ -17,8 +17,13 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   isCoursesDropdownOpen = false;
   isTopbarHidden: boolean = false;
   lastScrollTop: number = 0;
+  phoneNumber: string = '800-724-3000'
 
-
+  makeCall() {
+    const phoneNumber = '8007243000'; // Replace this with the actual phone number
+    window.location.href = `tel:${phoneNumber}`;
+  }
+  
   @HostListener('window:scroll', [])
   onWindowScroll() {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;

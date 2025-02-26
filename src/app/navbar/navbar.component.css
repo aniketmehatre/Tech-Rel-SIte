@@ -17,6 +17,7 @@
 .header .topbar .contact-info i {
     font-style: normal;
     color: var(--contrast-color);
+    cursor: pointer;
 }
 
 .header .topbar .contact-info i a,
@@ -44,7 +45,7 @@
 }
 
 .header .topbar .social-links a {
-    color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+    color: var(--contrast-color);
     line-height: 0;
     transition: 0.3s;
     margin-left: 20px;
@@ -110,9 +111,9 @@
     .navmenu a,
     .navmenu a:focus {
         color: var(--nav-color);
-        padding: 10px 15px;
-        font-size: 17px;
-        font-weight: 500;
+        padding: 10px 25px;
+        font-size: 18px;
+        font-weight: 700;
         display: flex;
         align-items: center;
         justify-content: space-between;

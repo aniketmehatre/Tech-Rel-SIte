@@ -86,6 +86,7 @@ img {
 .footer .footer-links {
     text-align: left;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .footer .footer-links h4 {

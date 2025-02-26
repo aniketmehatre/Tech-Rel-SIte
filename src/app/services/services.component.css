@@ -386,3 +386,124 @@ body {
 .card:hover .inside-page {
   box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
 }
+
+
+/* Responsive CSS */
+
+@media (max-width: 992px) {
+  .main {
+    height: auto;
+    margin-top: -125px;
+    margin-left: -25px;
+  }
+
+  .card-area {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    height: 14rem;
+    width: 14rem;
+  }
+
+  .flip-card,
+  .flip-card__container {
+    height: 14rem;
+    width: 14rem;
+  }
+
+  .inside-page {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    margin: 16px 50px;
+  }
+
+  .card {
+    height: 13rem;
+    width: 13rem;
+  }
+
+  .flip-card,
+  .flip-card__container {
+    height: 13rem;
+    width: 13rem;
+  }
+
+  .inside-page {
+    width: 13rem;
+  }
+
+  .inside-page__btn {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-area {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    height: 14rem;
+    width: 12rem;
+  }
+
+  .flip-card,
+  .flip-card__container {
+    height: 10rem;
+    width: 15rem;
+  }
+
+  .inside-page {
+    width: 12rem;
+  }
+
+  .inside-page__btn {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    height: auto;
+    margin-top: -125px;
+    margin-left: -25px;
+  }
+
+  .card {
+    height: 14rem;
+    width: 10rem;
+  }
+
+  .flip-card,
+  .flip-card__container {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .inside-page {
+    width: 10rem;
+  }
+
+  .card-front {
+    font-size: 12px;
+  }
+
+  .card-front__text-view,
+  .inside-page__heading,
+  .inside-page__text {
+    font-size: 12px;
+  }
+
+  .inside-page__btn {
+    width: 73%;
+    font-size: 12px;
+  }
+}
