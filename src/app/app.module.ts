@@ -26,6 +26,7 @@ import { DevopsComponent } from './courses/devops/devops.component';
 import { MoreAboutComponent } from './about/more-about/more-about.component';
 import { ContactBtnComponent } from './contact-btn/contact-btn.component';
 import { PopUpFromComponent } from './pop-up-from/pop-up-from.component';
+import { HashLocationStrategy,LocationStrategy} from '@angular/common';
 
 
 @NgModule({
@@ -59,7 +60,7 @@ import { PopUpFromComponent } from './pop-up-from/pop-up-from.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [{provide:LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
