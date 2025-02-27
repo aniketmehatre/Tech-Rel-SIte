@@ -66,9 +66,11 @@
 }
 
 .s2 p {
-    margin: 10px 0 30px;
+    margin: 14px 450px 5px;
     font-size: 1rem;
     color: #555;
+    width: 500px;
+    text-align: center;
 }
 
 .s2 .main {
@@ -127,7 +129,7 @@ button {
 --------------------------------------------------------------*/
 .hero {
     position: relative;
-    padding-top: 110px;
+    padding-top: 130px;
     background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
 }
 
@@ -399,11 +401,13 @@ button {
     .hero .hero-content {
         margin-top: -75px;
     }
+
     .hero-image img {
         display: none;
     }
-    #P_tagline{
-    font-size: 10px;
+
+    #P_tagline {
+        font-size: 10px;
     }
 }
 
@@ -421,7 +425,9 @@ button {
         cursor: pointer;
         margin-left: 70px;
     }
-    section, .section .s2{
+
+    section,
+    .section .s2 {
         padding: 0px 0px;
     }
 
@@ -430,14 +436,20 @@ button {
         color: var(--accent-color);
         font-weight: bold;
     }
-    .s2 p{
+
+    .s2 p {
         margin: 5px 0 15px;
         font-size: 0.8rem;
         color: #555;
     }
+
     .about .about-title {
         font-size: 1.5rem;
     }
+}
+
+.hero-buttons {
+    margin-top: -40px;
 }
 
 /* jop open position cards */
@@ -448,7 +460,7 @@ button {
     text-align: center;
     padding: 40px;
     background-color: #f9f9f9;
-    margin-top: -45px;
+    /* margin-top: -45px; */
 }
 
 #jobopen h2 {
@@ -458,7 +470,7 @@ button {
 }
 
 #jobopen p {
-    margin: 10px 0 30px;
+    margin: 10px 450 30px;
     font-size: 1rem;
     color: #555;
 }
@@ -625,51 +637,60 @@ h2 {
         flex-wrap: wrap;
         justify-content: start;
     }
-    .job-info2{
+
+    .job-info2 {
         font-size: 12px;
         color: #555;
         margin: 8px 0px;
         font-weight: 500;
     }
-    .about-description{
+
+    .about-description {
         font-size: 12px;
     }
-    .about-meta{
+
+    .about-meta {
         font-size: 15px;
     }
-    ul{
+
+    ul {
         font-size: 12px;
     }
-    .applyform{
+
+    .applyform {
         background: #fff;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         width: 250px;
-        margin-top: -60px;  
+        margin-top: -60px;
     }
 
-    .applyform h2{
+    .applyform h2 {
         font-size: 20px;
         font-weight: bold;
     }
-    .applyform .form-group label{
-    font-size: 12px;
-    font-weight: 500;
-    } 
-    .form-group{
-        margin: 0px;
-    }
-    .form-group select{
-      font-size: 12px;
+
+    .applyform .form-group label {
+        font-size: 12px;
+        font-weight: 500;
     }
 
-    .form-group input{
+    .form-group {
+        margin: 0px;
+    }
+
+    .form-group select {
         font-size: 12px;
     }
-    .applybtn{
+
+    .form-group input {
+        font-size: 12px;
+    }
+
+    .applybtn {
         padding: 10px 10px;
-    font-size: 12px;
+        font-size: 12px;
     }
 }
 
@@ -842,4 +863,90 @@ h2 {
     100% {
         transform: translateY(0);
     }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.plan {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+    font-size: 24px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: var(--contrast-color);
+    color: black;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: var(--surface-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Input Fields */
+input,
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

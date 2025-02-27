@@ -377,8 +377,6 @@
     #P_tagline {
         font-size: 12px;
         text-align: center;
-        width: 210px;
-        margin-left: 30px;
     }
 
     .hero .btn-primary {
@@ -467,9 +465,9 @@
     height: 1.5rem;
 }
 
-@media (max-width:375px) {
+@media (max-width:420px) {
     .hero .company-badge {
-        width: 90%;
+        width: 72%;
         font-size: 14px;
     }
 
@@ -482,6 +480,15 @@
         font-size: 1rem;
         margin-bottom: 0.25rem;
         font-weight: 600;
+    }
+
+    .hero .stats-row {
+        margin: 5px;
+    }
+
+    #P_tagline {
+        font-size: 12px;
+        text-align: center;
     }
 }
 

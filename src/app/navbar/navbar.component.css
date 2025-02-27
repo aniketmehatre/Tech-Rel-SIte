@@ -193,10 +193,14 @@
         left: -100%;
         visibility: visible;
     }
+
+    #mobile-nav-toggle {
+        display: none;
+    }
 }
 
 /* Navmenu - Mobile */
-@media (max-width: 1199px) {
+/* @media (max-width: 475px) {
     .topbar .new-batch {
         font-size: 15px;
     }
@@ -224,9 +228,10 @@
     }
 
     .navmenu ul {
-        display: none;
+        display: absolute;
         list-style: none;
         position: absolute;
+        left: -300px;
         inset: 60px 20px 20px 20px;
         padding: 10px 0;
         margin: 0;
@@ -332,7 +337,178 @@
     .mobile-nav-active .navmenu>ul {
         display: block;
     }
+} */
+
+@media (max-width: 1199px) {
+    .topbar .new-batch {
+        font-size: 15px;
+    }
+
+    .contact-info {
+        display: none !important;
+    }
+
+    img {
+        width: 100px;
+    }
+
+    #mobile-nav-toggle {
+        color: var(--nav-color);
+        font-size: 32px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .navmenu {
+        padding: 0;
+        z-index: 9997;
+        margin-top: -5px;
+    }
+
+    .navmenu ul {
+        position: absolute;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 6px;
+        background-color: var(--nav-mobile-background-color);
+        top: 56px;
+        left: -300px;
+        z-index: 9998;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+        transition-duration: .9s;
+
+        opacity: 0;
+        visibility: hidden;
+        width: 280px;
+        list-style: none;
+    }
+
+    /* Show navbar with animation */
+    .navmenu ul.active {
+        top: 40px;
+        opacity: 1;
+        visibility: visible;
+        left: 10px;
+        height: 21rem;
+    }
+
+    /* #navmenu .bi {
+        color: black;
+        transition-duration: .9s;
+        top: 12px;
+    } */
+
+    .navmenu a,
+    .navmenu a:focus {
+        color: var(--nav-dropdown-color);
+        padding: 10px 20px;
+        font-family: var(--nav-font);
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+    .navmenu a i,
+    .navmenu a:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: 0.3s;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+
+    .navmenu a i:hover,
+    .navmenu a:focus i:hover {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+    }
+
+    .navmenu a:hover,
+    .navmenu .active,
+    .navmenu .active:focus {
+        color: var(--nav-dropdown-hover-color);
+    }
+
+    .navmenu .active i,
+    .navmenu .active:focus i {
+        background-color: var(--accent-color);
+        transform: rotate(180deg);
+    }
+
+
+    .navmenu .dropdown ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 99;
+        padding: 10px 0;
+        margin: 0;
+        background-color: var(--nav-dropdown-background-color);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        box-shadow: none;
+        display: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navmenu .dropdown ul ul {
+        background-color: rgba(33, 37, 41, 0.1);
+    }
+
+    .navmenu .dropdown>.dropdown-active {
+        display: block;
+        background-color: rgba(33, 37, 41, 0.03);
+    }
+
+    .mobile-nav-active {
+        overflow: hidden;
+    }
+
+    /* .mobile-nav-active .mobile-nav-toggle {
+        color: #fff;
+        position: absolute;
+        font-size: 32px;
+        top: 20px;
+        right: 15px;
+        margin-right: 0;
+        z-index: 9999;
+    } */
+
+    .mobile-nav-active .navmenu ul {
+        position: fixed;
+        overflow: hidden;
+        inset: 0;
+        background: rgba(33, 37, 41, 0.8);
+        transition: 0.3s;
+        width: 324px;
+    }
+
+    .mobile-nav-active>ul {
+        display: block;
+        width: 280px;
+        height: 300px;
+    }
+
+    .navmenu li.show-dropdown ul {
+        position: static;
+        width: 100%;
+        background: var(--nav-dropdown-background-color);
+        box-shadow: none;
+        display: block !important;
+        padding: 10px;
+    }
+
 }
+
 
 /* text animation (new batch start) */
 .new-batch {

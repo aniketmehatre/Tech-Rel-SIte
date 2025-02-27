@@ -4,10 +4,11 @@
      margin-top: 130px;
      flex-wrap: wrap;
      justify-content: center;
+     background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
  }
 
  .card {
-     background: #fafafa;
+     background: rgba(255, 190, 170, 0.667);
      padding: 20px;
      border-radius: 10px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -15,10 +16,10 @@
      width: 250px;
  }
 
- .card h3 {
+ .card h5,
+ h2 {
      margin: 0;
-     color: #333;
-     font-size: 1.5em;
+     color: black;
  }
 
  .placedstud {

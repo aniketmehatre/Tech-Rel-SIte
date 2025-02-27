@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./career.component.css']
 })
 export class CareerComponent {
+  isModalOpen: boolean = false;
   isSectionVisible = false;
   isPopupOpen = false;
   jobForm: FormGroup;
@@ -42,5 +43,14 @@ export class CareerComponent {
 
   toggleSection() {
     this.isSectionVisible = !this.isSectionVisible;
+  }
+
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
   }
 }

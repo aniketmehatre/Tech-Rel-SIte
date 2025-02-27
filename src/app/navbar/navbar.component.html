@@ -10,32 +10,31 @@
             <ul [class.active]="isMenuOpen">
                 <li><a href="#hero" class="active" (click)="closeMenu()">Home</a></li>
                 <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
-                <li class="dropdown" [class.show-dropdown]="activeDropdown === 'courses'">
+
+                <li class="dropdown" [class.show-dropdown]="isCoursesDropdownOpen">
                     <a href="#" (click)="toggleDropdown($event)">
                         <span>Courses</span>
                         <i class="bi" [ngClass]="isCoursesDropdownOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
                     </a>
 
                     <ul id="navbar-submenu" *ngIf="isCoursesDropdownOpen">
-                        <li><a routerLink="courses/java">Java Full Stack</a></li>
-                        <li><a routerLink="courses/mern">MERN Stack</a></li>
-                        <li><a routerLink="courses/mean">MEAN Stack</a></li>
-                        <li><a routerLink="courses/devops">DevOps / AWS</a></li>
-                        <li><a routerLink="courses/testing">Software Testing</a></li>
-                        <li><a routerLink="courses/dotnet">Dot Net Full Stack</a></li>
+                        <li><a routerLink="courses/java" (click)="closeMenu()">Java Full Stack</a></li>
+                        <li><a routerLink="courses/mern" (click)="closeMenu()">MERN Stack</a></li>
+                        <li><a routerLink="courses/mean" (click)="closeMenu()">MEAN Stack</a></li>
+                        <li><a routerLink="courses/devops" (click)="closeMenu()">DevOps / AWS</a></li>
+                        <li><a routerLink="courses/testing" (click)="closeMenu()">Software Testing</a></li>
+                        <li><a routerLink="courses/dotnet" (click)="closeMenu()">Dot Net Full Stack</a></li>
                     </ul>
                 </li>
 
-
                 <li><a href="#feature" (click)="closeMenu()">Placed Students</a></li>
-                <li class="submenu"><a routerLink="/career" (click)="closeMenu()">Campus Drive</a></li>
+                <li><a routerLink="/career" (click)="closeMenu()">Campus Drive</a></li>
                 <li><a href="#contactUs" (click)="closeMenu()">Contact</a></li>
             </ul>
 
-            <i class="mobile-nav-toggle d-xl-none bi" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"
-                (click)="toggleMenu()">
-            </i>
+            <i class="mobile-nav-toggle bi" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'" (click)="toggleMenu()"></i>
         </nav>
+
         <a href="#contactUs" class="btn-getstarted">
             <i class="fa fa-phone"></i> +91 800-724-3000
         </a>
@@ -79,7 +78,8 @@
                 <ul [class.active]="isMenuOpen">
                     <li><a href="#hero" class="active" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
                     <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
-                    <li><a routerLink="/placed-students" routerLinkActive="active" (click)="closeMenu()">Placed Students</a>
+                    <li><a routerLink="/placed-students" routerLinkActive="active" (click)="closeMenu()">Placed
+                            Students</a>
                     </li>
                     <li class="dropdown"><a href="#"><span>Courses</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -96,12 +96,13 @@
                     <li><a routerLink="/mock-test" (click)="closeMenu()" routerLinkActive="active">Mock Test</a></li>
                     <li><a href="#contactUs" (click)="closeMenu()" routerLinkActive="active">Contact</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"
+                <i id="mobile-nav-toggle" class="mobile-nav-toggle mt-3 bi bi-list" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"
                     (click)="toggleMenu()"></i>
             </nav>
 
         </div>
 
     </div>
+
 
 </header>

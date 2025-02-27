@@ -42,13 +42,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log("Menu Open:", this.isMenuOpen);
-
-    if (this.isMenuOpen) {
-      document.addEventListener('click', this.closeMenuOnOutsideClick);
-    } else {
-      document.removeEventListener('click', this.closeMenuOnOutsideClick);
-    }
   }
 
 
@@ -60,6 +53,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
       this.isOpensubmenu = false;
       document.removeEventListener('click', this.closeMenuOnOutsideClick);
     }
+    
   }
 
   // Close menu when pressing Escape key
@@ -95,13 +89,16 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   toggleDropdown(event: Event) {
-    event.stopPropagation(); // Prevent menu from closing when clicking inside dropdown
+    event.preventDefault();
     this.isCoursesDropdownOpen = !this.isCoursesDropdownOpen;
   }
   @HostListener('document:click', ['$event'])
   closeDropdownOutside(event: Event) {
     this.isCoursesDropdownOpen = false;
   }
+
+
+
 
   ngAfterViewInit() {
     const app = document.getElementById('app');

@@ -7,20 +7,31 @@
                 <div class="hero-content">
 
                     <h1 class="mb-4">
-                        <span class="accent-text">Join Us</span><br>
-                        in Building Innovative Solutions for Tomorrow!
+                        Welcome To <br> Techrel Campus Drive
 
                     </h1>
 
                     <p class="mb-4 mb-md-5" id="P_tagline">
-                        At SK BIT, we craft transformative solutions through <br>
-                        innovation and collaboration. Join a team where your expertise <br>
-                        drives impact and shapes the future of technology.
+                        <strong>Get Unlimited placement calls and secure your <br> Dream job with Techrel
+                            Technologies..! <br> <br>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Top Recruiters & MNCs</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Internship & Job Opportunities
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Live Industry Projects</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Professional Resume & Interview
+                                    Training</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hands-on Experience in the
+                                    Latest
+                                    Technologies</li>
+                            </ul>
+                        </strong>
                     </p>
 
+
                     <div class="hero-buttons">
-                        <button (click)="scrollToJobOpen()">
-                            View Open Positions
+                        <button (click)="openModal()">
+                            Join Now
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" style="width: 20px; height: 20px; margin-left: 8px;">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -32,50 +43,44 @@
             </div>
 
             <div class="col-lg-6 video-box">
-                <div class="hero-image">
-                    <img src="../assets/img/careerimg.jpg" alt="">
+                <div class="img ">
+                    <img src="../../assets/img/plan-img.jpg" alt="">
                 </div>
             </div>
-
         </div>
     </div>
-
 </section>
+
+
+
 <!-- /Hero Section -->
-<section class="s2">
-    <h2>Why Work With Us?</h2>
-    <p>Discover what makes SK BIT the perfect place to grow your career.</p>
+<!-- <section class="s2">
+    <h2>Launch Your Career with Us – Innovate, Grow, Succeed..!</h2>
+    <p>At TechRel Institute, We bridge the gap between students and top industry recruiters through exclusive campus
+        drives. Our structured placement programs ensure that our students get access to:</p>
     <div class="main">
-        <!-- Card 1 -->
         <div>
-            <i class="bi bi-hourglass-split" alt="Learning Opportunities"></i>
-            <h3>Flexible Working Hours</h3>
-            <p>Work on your terms and find your best productivity flow.</p>
+            <i class="bi bi-buildings" alt="Learning Opportunities"></i>
+            <h3>Top Recruiters & MNCs</h3>
         </div>
-        <!-- Card 2 -->
         <div>
             <i class="bi bi-code-slash" alt="Learning Opportunities"></i>
-            <h3>Learning & Development</h3>
-            <p>Upskill with training, mentorship, and certifications.</p>
+            <h3>Internship & Job Opportunities</h3>
         </div>
-        <!-- Card 3 -->
         <div>
             <i class="bi bi-person-workspace" alt="Learning Opportunities"></i>
-            <h3>Positive Work Culture</h3>
-            <p>Be part of an inclusive and supportive environment.</p>
+            <h3>Professional Resume & Interview Training</h3>
         </div>
-        <!-- Card 4 -->
         <div>
             <i class="bi bi-graph-up-arrow" alt="Learning Opportunities"></i>
-            <h3>Career Growth</h3>
-            <p>Achieve new heights with clear growth pathways.</p>
+            <h3>Hands-on Experience in the Latest Technologies</h3>
         </div>
     </div>
-</section>
+</section> -->
 
 
-<section #jobopenSection id="jobopen">
-    <h2>Current Job Openings</h2>
+<section #jobopenSection id="jobopen" class="s2">
+    <h2>Current Campus Openings</h2>
     <p>Join a team where innovation meets growth. Explore exciting opportunities and build your future with us! </p>
 
     <div class="job-container">
@@ -218,3 +223,32 @@
         </div>
     </div>
 </section><!-- /About Section -->
+<app-company></app-company>
+
+
+<div id="demoModal" class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h5>Get Unlimited Placement </h5>
+        <hr>
+        <form>
+            <label for="name">
+                <input type="text" id="name" placeholder="Enter your name">
+            </label>
+            <label for="email">
+                <input type="email" id="email" placeholder="Please enter your email">
+            </label>
+            <label for="phone">
+                <input type="tel" id="phone" placeholder="Phone number">
+            </label>
+            <label for="qualification">
+                <input type="text" id="qualification" placeholder="Higher Qualification">
+            </label>
+            <label for="passout-year">
+                <input type="number" id="passout-year" placeholder="Passout Year">
+            </label>
+        </form>
+
+        <button class="btn btn-primary" (click)="submitForm()">Send</button>
+    </div>
+</div>

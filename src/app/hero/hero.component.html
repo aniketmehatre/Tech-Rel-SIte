@@ -16,7 +16,7 @@
             <span class="accent-text"> tech revolutions</span>
           </h1>
           <p id="P_tagline" class="mb-4 mb-md-5">
-            TechRel offers industry-focused IT training with hands-on learning <br> 100% placement assistance,
+            TechRel offers industry-focused IT Training & learning <br> 100% placement assistance,
             ensuring you land your <br>
             dream job in top IT Companies.
             <br><br>
@@ -106,9 +106,17 @@
     <label for="phone">
       <input type="" id="phone" placeholder="Phone number">
     </label>
-    <label for="mensaje">
-      <textarea id="mensaje" cols="30" rows="5" placeholder="Leave us a message."></textarea>
-    </label>
+    <select id="contactOptions">
+      <option value="none">Choose an Courses</option>
+      <option value="message">Java Full Stack</option>
+      <option value="call">MEAN Stack</option>
+      <option value="call">MERN Stack</option>
+      <option value="call">Dot Net Developer</option>
+      <option value="call">DevOps / AWS</option>
+      <option value="call">Software Testing</option>
+    </select>
+    <hr>
+    <br>
     <button class="btn btn-primary" (click)="submitForm()">Send</button>
   </div>
 </div>

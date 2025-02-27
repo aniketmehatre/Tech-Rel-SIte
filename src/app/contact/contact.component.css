@@ -104,12 +104,15 @@ textarea,
   }
 }
 
-@media (max-width: 345px) {
+@media (max-width: 445px) {
   #contactUs .contact-box .contact-main-box .contact-title {
-    font-size: 18px;
+    font-size: 1.5rem;
+    margin-top: 10px;
   }
 
   .contact-para {
-    font-size: 12px;
+    font-size: 1rem;
   }
+
+
 }
